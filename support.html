@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدعم الفني — محاكي تداول</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px;
+            background: #0A0E17;
+            color: #E0E0E8;
+            line-height: 1.7;
+        }
+        h1 { color: #FFF; font-size: 1.9em; margin-bottom: 8px; }
+        h2 { color: #FFF; margin-top: 36px; font-size: 1.3em; }
+        h3 { color: #C0C0CC; margin-top: 24px; font-size: 1.05em; }
+        .meta { color: #888; font-size: 0.9em; margin-bottom: 30px; }
+        a { color: #FFD700; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .cta {
+            display: inline-block;
+            background: #FFD700;
+            color: #0A0E17 !important;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 700;
+            margin: 16px 0;
+            font-size: 1.05em;
+        }
+        .cta:hover { background: #FFC800; text-decoration: none; }
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .lang-toggle .pill {
+            display: inline-flex;
+            background: #1A1E2E;
+            border: 1px solid #2A2E3E;
+            border-radius: 999px;
+            padding: 4px;
+        }
+        .lang-toggle button {
+            background: transparent;
+            color: #888;
+            border: none;
+            padding: 8px 22px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 999px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .lang-toggle button.active {
+            background: #FFD700;
+            color: #0A0E17;
+        }
+        .lang-panel { display: none; }
+        .lang-panel.active { display: block; }
+        ul { padding-inline-start: 22px; }
+        li { margin-bottom: 6px; }
+    </style>
+</head>
+<body>
+    <div class="lang-toggle">
+        <div class="pill">
+            <button id="btnAr" class="active" onclick="setLang('ar')">العربية</button>
+            <button id="btnEn" onclick="setLang('en')">English</button>
+        </div>
+    </div>
+
+    <div id="ar" class="lang-panel active">
+        <h1>الدعم الفني</h1>
+        <p class="meta">محاكي تداول — Trading Simulator</p>
+
+        <h2>تواصل معنا</h2>
+        <a class="cta" href="mailto:abdullahalorynan@gmail.com?subject=دعم%20-%20محاكي%20تداول">إرسال إيميل</a>
+        <p>نرد خلال <strong>24-48 ساعة</strong>.</p>
+
+        <h2>أسئلة شائعة</h2>
+
+        <h3>كيف ألعب؟</h3>
+        <p>اختر السوق (سعودي، أمريكي، عملات رقمية، فوركس)، ثم اختر المرحلة. راح تشوف رسم بياني حقيقي من الماضي — اشترِ وبِع وحاول تحقق أرباح بدون ما تعرف وش السهم.</p>
+
+        <h3>هل فيه فلوس حقيقية؟</h3>
+        <p>لا، التطبيق تعليمي بالكامل. الرصيد افتراضي والبيانات تاريخية — ما فيه أي مخاطرة مالية.</p>
+
+        <h3>كيف أُغيّر اللغة؟</h3>
+        <p>من شاشة الإعدادات (أيقونة الترس في الشاشة الرئيسية).</p>
+
+        <h3>وش هي رموز الرافعة؟</h3>
+        <p>رموز الرافعة تسمح لك تتداول بمضاعفات (2x إلى 10x). تحصل عليها بمشاهدة إعلان قصير — كل مشاهدة تعطيك 5 رموز.</p>
+
+        <h3>هل بياناتي محفوظة؟</h3>
+        <p>نعم، تقدّمك ومراحلك وإنجازاتك كلها محفوظة على جهازك. حذف التطبيق يمسحها.</p>
+
+        <h3>كيف أحذف بياناتي؟</h3>
+        <p>من الإعدادات اختر "حذف جميع البيانات"، أو راجع <a href="data-deletion.html">صفحة طلب حذف البيانات</a>.</p>
+
+        <h3>التطبيق يُظهر إعلانات — هل يمكن إزالتها؟</h3>
+        <p>الإعلانات تساعدنا في تطوير التطبيق وإبقائه مجاني. نسخة بدون إعلانات قد تتوفر مستقبلاً.</p>
+
+        <h2>الإبلاغ عن مشكلة</h2>
+        <p>عند الإبلاغ، أرفق:</p>
+        <ul>
+            <li>نوع الجهاز ونظام التشغيل (مثال: iPhone 15, iOS 18)</li>
+            <li>إصدار التطبيق (موجود في شاشة الإعدادات)</li>
+            <li>وصف الخطوات التي أدّت للمشكلة</li>
+            <li>لقطة شاشة (إن أمكن)</li>
+        </ul>
+
+        <h2>روابط مفيدة</h2>
+        <ul>
+            <li><a href="index.html">سياسة الخصوصية</a></li>
+            <li><a href="data-deletion.html">طلب حذف البيانات</a></li>
+            <li><a href="https://apps.apple.com/us/app/trading-simulator-%D9%85%D8%AD%D8%A7%D9%83%D9%8A-%D8%AA%D8%AF%D8%A7%D9%88%D9%84/id6766337366">App Store</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.tradingmachine.trader">Google Play</a></li>
+        </ul>
+    </div>
+
+    <div id="en" class="lang-panel">
+        <h1>Support</h1>
+        <p class="meta">Trading Simulator</p>
+
+        <h2>Contact Us</h2>
+        <a class="cta" href="mailto:abdullahalorynan@gmail.com?subject=Support%20-%20Trading%20Simulator">Send Email</a>
+        <p>We respond within <strong>24-48 hours</strong>.</p>
+
+        <h2>FAQ</h2>
+
+        <h3>How do I play?</h3>
+        <p>Pick a market (Saudi, US, Crypto, Forex), then choose a stage. You'll see a real chart from the past — buy and sell to make a profit without knowing which instrument it is.</p>
+
+        <h3>Is real money involved?</h3>
+        <p>No. The app is purely educational. The balance is virtual and the data is historical — zero financial risk.</p>
+
+        <h3>How do I change the language?</h3>
+        <p>From the Settings screen (gear icon on the home screen).</p>
+
+        <h3>What are leverage tokens?</h3>
+        <p>Leverage tokens let you trade with multipliers (2x to 10x). Watch a short ad to earn 5 tokens per view.</p>
+
+        <h3>Is my progress saved?</h3>
+        <p>Yes — your progress, stages, and achievements are all stored locally on your device. Uninstalling the app clears them.</p>
+
+        <h3>How do I delete my data?</h3>
+        <p>Go to Settings and tap "Delete all data", or see the <a href="data-deletion.html">Data Deletion Request</a> page.</p>
+
+        <h3>Can I remove the ads?</h3>
+        <p>Ads help us keep the app free. An ad-free option may come in future updates.</p>
+
+        <h2>Reporting an Issue</h2>
+        <p>When reporting, please include:</p>
+        <ul>
+            <li>Device and OS version (e.g., iPhone 15, iOS 18)</li>
+            <li>App version (visible in Settings)</li>
+            <li>Steps to reproduce the issue</li>
+            <li>Screenshot if possible</li>
+        </ul>
+
+        <h2>Useful Links</h2>
+        <ul>
+            <li><a href="index.html">Privacy Policy</a></li>
+            <li><a href="data-deletion.html">Data Deletion Request</a></li>
+            <li><a href="https://apps.apple.com/us/app/trading-simulator-%D9%85%D8%AD%D8%A7%D9%83%D9%8A-%D8%AA%D8%AF%D8%A7%D9%88%D9%84/id6766337366">App Store</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.tradingmachine.trader">Google Play</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.querySelectorAll('.lang-panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
+            document.getElementById(lang).classList.add('active');
+            document.getElementById('btn' + lang.charAt(0).toUpperCase() + lang.slice(1)).classList.add('active');
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+        try {
+            var saved = localStorage.getItem('lang');
+            if (saved === 'en') setLang('en');
+        } catch (e) {}
+    </script>
+</body>
+</html>
